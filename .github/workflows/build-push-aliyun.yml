@@ -48,7 +48,7 @@ jobs:
             NODE_IMAGE=docker.m.daocloud.io/library/node:24-alpine
             RUNTIME_IMAGE=docker.m.daocloud.io/library/node:24-alpine
           tags: |
-            ${{ env.REGISTRY }}/${{ env.REGISTRY_NAMESPACE }}/open-design:${GITHUB_SHA}
+            ${{ env.REGISTRY }}/${{ env.REGISTRY_NAMESPACE }}/open-design:${{ github.sha }}
             ${{ env.REGISTRY }}/${{ env.REGISTRY_NAMESPACE }}/open-design:latest
           cache-from: type=gha,scope=open-design
           cache-to: type=gha,mode=max,scope=open-design
